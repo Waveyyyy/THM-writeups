@@ -63,7 +63,7 @@ Private Key Pair: (61527, 37627)
 	
   7. use john `john rsakey -w=/usr/share/wordlists/rockyou.txt`
 ```
-passphrase: wildflower
+passphrase: REDACTED
 ```
 	
   8. ssh into the server using passphrase wildflower `ssh -i rsakey wildflower@IP`
